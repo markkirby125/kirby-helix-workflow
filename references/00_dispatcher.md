@@ -21,6 +21,14 @@ This workflow is based on Shopify's internal "Helix" pipeline.
 3. **The 4 Gates**: Tests, UI, Adversarial Review, Human-in-the-Loop.
 4. **The Ralph Loop & Memory**: OS-level exit code traps and dual-tier `learnings.md` files to prevent repeated mistakes.
 
+## Sibling Routing: kirby-pocock-workflow (Complementary Pipeline)
+
+`../../kirby-pocock-workflow/SKILL.md` operates as the conversational sibling on top of a Helix-bootstrapped environment. Division of ownership:
+*   **Pocock owns the specification lifecycle**: grilling interviews + `GLOSSARY.md`, immutable specs, Smart Zone ticket DAGs, clean-head build orchestration, two-desk reviews, and merge-danger PR gates.
+*   **Helix owns the deterministic runtime**: `<gates>` blocks, exit-code test traps, the 4 gates, and dual-tier `learnings.md` memory.
+*   **Handoff points:** (1) Pocock's `/retro` (Module 7 §7.4) implements every runtime-form constraint — test traps, gate blocks, `learnings.md` entries — HERE rather than duplicating enforcement; static checks (linters/hooks) stay in repo tooling. (2) Pocock's clean-head builds (Module 4) inherit whatever gates this skill has installed in the environment — isolation does not bypass them. (3) A Helix gate failure on a Pocock ticket is review feedback for Desk 2, not an environment bug to route around.
+*   Use Pocock when starting from ambiguity (a feature, an interview, a spec); use Helix when hardening the environment itself (gates, memory, enforcement). They compose; neither replaces the other.
+
 ---
 
 ## Execution Steps
