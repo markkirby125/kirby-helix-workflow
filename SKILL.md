@@ -4,7 +4,7 @@ description: "Bootstraps a strict, production-ready agentic coding workflow base
 category: workflow
 triggers: [helix workflow, bootstrap helix, deterministic gates, agent workflow, dual-tier memory, learnings memory]
 risk: safe
-author: markkirby125
+author: paul-kirby
 tags: [helix, bootstrapping, workflow, testing, memory]
 ---
 
