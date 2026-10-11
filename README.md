@@ -2,6 +2,8 @@
 
 Bootstraps a strict, production-ready agentic coding workflow based on Shopify's Helix architecture: ordered checkpoints, context-isolated subagents, 4 deterministic gates (tests, UI, adversarial review, human-in-the-loop), and dual-tier `learnings.md` memory so agents never repeat a mistake.
 
+**October 2026 addition:** a complementary-sibling contract with `kirby-pocock-workflow` — Helix owns the deterministic runtime (gates, exit-code traps, `learnings.md`); Pocock owns the conversational spec, ticket DAG, and clean-head build lifecycle. Handoff points are documented in the dispatcher's Sibling Routing section.
+
 ### 🪄 The Magic Prompt
 Copy and paste this into any AI coding app (Cursor, Windsurf, Claude Code, Grok, Kimi, Reasonix):
 
